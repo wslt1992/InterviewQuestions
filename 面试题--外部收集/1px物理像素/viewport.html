@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 200px;
+            /*height: 200px;*/
+            height: 0.53rem; /* 200/375 */
+            border-bottom: 1px solid #000;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+
+    </div>
+<script>
+    const width = document.documentElement.clientWidth
+    console.log(width)
+    const dpr = window.devicePixelRatio
+    const scale = 1/dpr
+    const mateNode = document.querySelector('meta[name="viewport"]')
+    mateNode.setAttribute('content',`width=device-width, initial-scale=${scale}`)
+
+    // 前后 width的值发生了变化，缩放0.5后，width变大。375->750
+    const width2 = document.documentElement.clientWidth
+    console.log(width2)
+
+    const htmlNode = document.querySelector('html')
+    htmlNode.style.fontSize = width * dpr + 'px'
+    console.log(htmlNode.style.fontSize)
+</script>
+</body>
+</html>

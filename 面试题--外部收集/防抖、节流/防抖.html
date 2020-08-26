@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button id="btn">点击</button>
+
+<script>
+    function debounce(fn, delay) {
+        let timer = null;
+        return function() {
+            clearTimeout(timer);
+            timer = setTimeout(function(){
+                fn.apply(this, arguments)
+            },delay)
+        }
+    }
+
+    document.querySelector('#btn').onclick = debounce(function(){console.log('按钮被点击了'+Date.now())},500)
+</script>
+</body>
+</html>

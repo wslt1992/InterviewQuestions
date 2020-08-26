@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Title</title>
+    <style>
+        .box{
+        /*<!-- 假设宽为 200px-->*/
+            width: 0.53rem;
+            height: 0.53rem;
+            /*width: 200px;*/
+            height:200px;
+            background:chartreuse;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+
+</div>
+<script>
+    const width = document.documentElement.clientWidth
+    const htmlNode = document.querySelector('html')
+    htmlNode.style.fontSize = width + 'px'
+</script>
+</body>
+</html>

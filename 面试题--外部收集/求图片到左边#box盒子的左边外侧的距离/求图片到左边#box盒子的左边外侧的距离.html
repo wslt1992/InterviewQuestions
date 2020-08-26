@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            /* 考察的知识点盒子模型
+            从内到外 content-box  ----> padding-box  ----> border-box
+                        */
+            width: 100px;
+            height: 200px;
+            padding: 100px;
+            border:80px solid blue;
+            background-image: url('./icon.jpg');
+            background-repeat: no-repeat;
+            /* background-origin: 默认为 padding-box   */
+            background-origin: content-box;
+            /* 左移50px*/
+            background-position: -50px 0;
+
+            /*距离 = 130px =  border-left(80) + padding-left:（100）+ background-position(-50)  */
+        }
+    </style>
+</head>
+<body>
+
+<div id="box">
+
+</div>
+</body>
+</html>
