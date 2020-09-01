@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<!--
+    块元素（block element）
+        - 在网页中一般通过块元素对网页进行布局
+    行内元素（inline element）
+        - 行内元素主要用来包裹文字
+
+
+        - 一般情况下 块元素（block element）中可以放行内元素（inline element），而不会行内元素放块元素
+        - 块元素什么都可以放
+        - p元素中不能放任何块元素
+
+    浏览器在解析网页时，会自动对网页中不符合规范的内容进行修正
+        比如：
+            标签写在根元素（<html>）的外面
+            p元素中嵌套块元素（block element）
+            根元素（<html>）出现了除了head和body以外的子元素
+            ... ...
+
+-->
+
+<!--    错误用法-->
+    <p>段落<h1>标题</h1>段落</p>
+</head>
+<body>
+</body>
+</html>
