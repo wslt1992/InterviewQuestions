@@ -67,7 +67,7 @@ module:{
 babel-loader可以将jsx编译为js，或者es6->es5。但是这需要预设配置presets。如果不进行预设，babel-loader将什么都不做
 。presets:['react']表示将jsx语法编译js
 
-###对样式文件的处理 css-loader style-loader
+### 对样式文件的处理 css-loader style-loader
 
 + 入口文件index.js引入样式文件
 ```
