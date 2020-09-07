@@ -67,7 +67,7 @@ module:{
 babel-loader可以将jsx编译为js，或者es6->es5。但是这需要预设配置presets。如果不进行预设，babel-loader将什么都不做
 。presets:['react']表示将jsx语法编译js
 
-### 对样式文件的处理 css-loader style-loader
+### 对样式文件的处理，css-loader，style-loader
 
 + 入口文件index.js引入样式文件
 ```
@@ -99,9 +99,10 @@ module:{
     }
             
 ```
-use中的style-loader和css-loader顺序不能变，因为loader的处理有一个优先级，从右到左。  
-**css-loader** 处理.css文件里面的样式，处理后的.css将是一个数组，包含了文件路径和样式等信息。  
-**style-loader** 将css-loader处理的结果，再次处理后放入到\<style\>标签中。（通过一个JS脚本创建一个style标签，）  
+
+use中的style-loader和css-loader顺序不能变，因为loader的处理有一个优先级，从右到左。
+**css-loader**   ：处理.css文件里面的样式，处理后的.css将是一个数组，包含了文件路径和样式等信息。
+**style-loader** ：将css-loader处理的结果，再次处理后放入到\<style\>标签中。（通过一个JS脚本创建一个style标签，）
 ------------------
 ### 引入图片 file-loader url-loader
 + file-loader引入图片
