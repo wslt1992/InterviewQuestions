@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="./Promise.js"></script>
+    <script >
+        const p = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                resolve(1) //value
+            },100)
+            // reject(2)// reason
+        })
+        p.then(value=>{
+            console.log(1)
+        },reason=>{})
+        p.then(value=>{
+            console.log(1)
+
+        },reason=>{})
+    </script>
 </head>
 <body>
 
